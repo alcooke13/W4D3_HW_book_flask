@@ -23,7 +23,7 @@ def select_all():
 
 
 def select(id):
-    Author = None
+    author = None
     sql = "SELECT * FROM authors WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
@@ -35,11 +35,11 @@ def select(id):
 
 
 def delete_all():
-    sql = "DELETE  FROM authors"
+    sql = "DELETE FROM authors"
     run_sql(sql)
 
 
 def delete(id):
-    sql = "DELETE  FROM authors WHERE id = %s"
+    sql = "DELETE FROM authors WHERE id = %s"
     values = [id]
     run_sql(sql, values)
